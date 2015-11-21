@@ -10,9 +10,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_margin="10dp"
+        
         android:adjustViewBounds="true"
-        android:background="#ffcccccc"
+        android:background="#000"
         android:scaleType="centerCrop" />
 
     <TextView
@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/listImage"
         android:layout_alignTop="@+id/listImage"
+        android:layout_marginLeft="10dp"
         android:ellipsize="marquee"
         android:fadingEdge="horizontal"
         android:lines="1"
@@ -28,7 +29,7 @@
         android:scrollHorizontally="true"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#ff4500"
+        android:textColor="#1565C0"
         android:textStyle="bold" />
 
     <TextView
@@ -36,6 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/listImage"
+        android:layout_marginLeft="10dp"
         android:layout_centerVertical="true"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" 
@@ -44,7 +46,7 @@
         android:lines="1"
         android:marqueeRepeatLimit="marquee_forever"
         android:scrollHorizontally="true"
-        android:textColor="#ff4500"
+        android:textColor="#1565C0"
         android:textStyle="bold"/>
 
     <TextView
@@ -53,6 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/listImage"
         android:layout_alignLeft="@+id/listImage"
+        android:layout_marginLeft="10dp"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium"
            android:ellipsize="marquee"
@@ -60,6 +63,7 @@
         android:lines="1"
         android:marqueeRepeatLimit="marquee_forever"
         android:scrollHorizontally="true"
+        android:textColor="#fff"
         android:textStyle="bold" />
 
 </RelativeLayout>

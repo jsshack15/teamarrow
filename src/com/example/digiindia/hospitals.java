@@ -69,6 +69,7 @@ public class hospitals extends Activity implements OnItemSelectedListener{
 		dropdown1.setOnItemSelectedListener(this);
 		//ArrayAdapter<String> adapter2 =new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,distct);
 		lv1=(ListView)findViewById(R.id.listView1);
+		lv1.setBackgroundColor(Color.WHITE);
 		e1=(EditText)findViewById(R.id.editText1);
 		tvv=(TextView)findViewById(R.id.textView1);
 		//et1=(EditText)findViewById(R.id.editText1);
@@ -420,7 +421,7 @@ lv1.setAdapter(adapter3);
 			listview3 cdd1=new listview3(tv1[position],tv2[position],tv3[position],tv4[position],tv5[position],tv6[position],tv7[position],tv8[position],hospitals.this);
 			
 		 	
-			cdd1.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#ffffff")));
+			cdd1.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00ffffff")));
 			cdd1.show();
 			Window window = cdd1.getWindow();
 			window.setLayout(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
@@ -725,7 +726,7 @@ if(pos!=-1)
 			listview3 cdd1=new listview3(utt1[position],utt2[position],utt3[position],utt4[position],utt5[position],utt6[position],utt7[position],utt8[position],hospitals.this);
 			
 		 	
-			cdd1.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#ffffff")));
+			cdd1.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00ffffff")));
 			cdd1.show();
 			Window window = cdd1.getWindow();
 			window.setLayout(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
