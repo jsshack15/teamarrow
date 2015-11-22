@@ -230,7 +230,7 @@ lv1.setAdapter(adapter3);
 					String serch_str=et1.getText().toString();
 					for(int i=0;i<h4;i++)
 					{
-						if(tv2[i].equalsIgnoreCase(serch_str))
+						if(tv2[i].contains(serch_str))
 						{
 							pos=i;
 						}

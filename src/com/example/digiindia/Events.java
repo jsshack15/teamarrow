@@ -9,6 +9,7 @@ import java.lang.reflect.Field;
 
 import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 //import android.app.Fragment;
 import android.graphics.Color;
@@ -30,14 +31,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 public class Events extends Fragment{
-	 String[] contacts={"Aadhar Card","Hospitals","Minerals","Income Tax","Pincode","Location Messesging","Mineral Lease","Rights"};
+	 String[] contacts={"Aadhar Card","Hospitals","Minerals","Income Tax","Pincode","Blood Bank","Location Messesging","Mineral Lease","Rights"};
 	 Integer[] imageId = {
-		      R.drawable.qr_code_logo,R.drawable.egov1,R.drawable.egov11,R.drawable.egov3,R.drawable.egov4,R.drawable.egov9,R.drawable.lease,R.drawable.egov6,
+		      R.drawable.qr_code_logo,R.drawable.egov1,R.drawable.egov11,R.drawable.egov3,R.drawable.egov4,R.drawable.bloodbank,R.drawable.egov9,R.drawable.lease,R.drawable.egov6,
 		      };
 	 public static Events newInstance() {
 			return new Events();
 		}
-		
+	 ProgressDialog	 mProgressDialog ;
 	    
 	@Override
 	public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle args) {
@@ -79,7 +80,14 @@ arg2--;
 		if(arg2==-1)
 		{
 			Intent i=new Intent(getActivity(),AdharScan.class);
+		mProgressDialog = new ProgressDialog(getActivity());
+				mProgressDialog.setTitle("Location");
+				mProgressDialog.setMessage("Fetching...");
+				mProgressDialog.setIndeterminate(false);
+				mProgressDialog.show();
+			
 			startActivity(i);
+			mProgressDialog.dismiss();
 			
 		}
 		if(arg2==0)
@@ -96,7 +104,7 @@ arg2--;
 			Intent i=new Intent(getActivity(),Tax.class);
 			startActivity(i);
 		}
-		if(arg2==6)
+		if(arg2==7)
 		{
 			Intent i=new Intent(getActivity(),Right_to_informtion.class);
 			startActivity(i);
@@ -108,10 +116,16 @@ arg2--;
 		}
 		if(arg2==4)
 		{
+			Intent i=new Intent(getActivity(),bloodbank.class);
+			startActivity(i);
+		}
+		
+		if(arg2==5)
+		{
 			Intent i=new Intent(getActivity(),mygpsact.class);
 			startActivity(i);
 		}
-		if(arg2==5)
+		if(arg2==6)
 		{
 			Intent i=new Intent(getActivity(),mineral_mineral_lease.class);
 			startActivity(i);

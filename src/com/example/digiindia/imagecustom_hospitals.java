@@ -32,8 +32,8 @@ this.web3 = web3;
 this.web4 = web4;
 this.web5 = web5;
 this.web6 = web6;
-this.web7 = web7;
 this.web8 = web8;
+this.web7 = web7;
 
 }
 @Override
